@@ -1,0 +1,23 @@
+.app {
+    height: 100hv;
+
+    .sections{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: lightsalmon;
+        //top: 70px;
+        scroll-behavior: smooth;
+        //scroll-snap-type: y mandatory;
+        scrollbar-width: none; //no scrollbar for firefox
+        &::-webkit-scrollbar{
+            display:none;
+        }
+
+        > *{
+            width:100vw;
+            height: calc(100vh - 70px);
+            //scroll-snap-align: start;
+        }
+    }
+}

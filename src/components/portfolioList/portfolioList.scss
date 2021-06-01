@@ -1,0 +1,27 @@
+@import "../../global.scss";
+
+        .portfolioList{
+            font-size: 18px;
+            margin-right: 50px;
+            padding: 15px;
+            border-radius: 1px;
+            cursor: pointer;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                color: #9d9c9c;
+            }
+
+            &:active {
+                color: $secondaryColor;
+            }
+
+            &.active{
+                //background-color: $secondaryColor;
+                color: $secondaryColor;
+                font-weight: 700;
+
+            }
+        }
