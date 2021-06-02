@@ -46,6 +46,31 @@
             h3 {
                 position: absolute;
                 font-size: 30px;
+
+                a {
+                    text-decoration: none;
+                }
+            
+                h5 {
+                    color: $secondaryColor;
+                }
+            
+                a:hover {
+                    color:#9d9c9c;
+                    text-decoration: underline;
+                }
+            
+                h5:hover {
+                    color:#9d9c9c;
+                }
+                
+                a:active {
+                    color: $secondaryColor;
+                }
+            
+                h5:active {
+                    color: $secondaryColor;
+                }
             }
 
             img {

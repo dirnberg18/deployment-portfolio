@@ -2,21 +2,16 @@
 import "./portfolio.scss";
 import PortfolioList from "../portfolioList/PortfolioList";
 import {useEffect, useState} from "react";
-import {digitalPortfolio, webappPortfolio, designPortfolio, artPortfolio} from "../../data.js";
-import Download from "../downloads/Download";
+import {digitalPortfolio, designPortfolio, artPortfolio} from "../../data.js";
+
 
 export default function Portfolio() {
-    const[selected, setSelected] = useState("digital");
+    const[selected, setSelected] = useState("3d");
     const[data, setData] = useState([]);
     const list = [
         {
-            id: "digital",
-            title: "Digital",
-        },
-
-        {
-            id: "webapp",
-            title: "Webapp",
+            id: "3d",
+            title: "3D",
         },
 
         {
@@ -25,24 +20,21 @@ export default function Portfolio() {
         },
 
         {
-            id: "art",
-            title: "Art",
+            id: "galerie",
+            title: "Galerie",
         },
     ];
 
     useEffect(()=>{
 
         switch(selected){
-            case "digital":
+            case "3d":
                 setData(digitalPortfolio);
-                break;
-            case "webapp":
-                setData(webappPortfolio);
                 break;
             case "design":
                 setData(designPortfolio);
                 break;
-            case "art":
+            case "galerie":
                 setData(artPortfolio);
                 break;
                 default:
@@ -72,7 +64,7 @@ export default function Portfolio() {
                         src={d.img}
                         alt=""
                         />
-                        <h3>{d.title} <Download/> </h3>
+                        <h3>{d.title} <a href = {d.file} target = "_blank" rel="noreferrer"><h5>Hier geht's zum Pdf</h5></a></h3>
                     </div>
                 ))}
             </div>
